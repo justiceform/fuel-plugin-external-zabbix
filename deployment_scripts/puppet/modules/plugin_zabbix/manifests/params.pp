@@ -53,8 +53,7 @@ class plugin_zabbix::params {
       $server_log_file           = "${zabbix_base_log_dir}/zabbix_server.log"
 
       $prepare_schema_cmd        = join([
-        'cat /usr/share/zabbix-server-mysql/schema.sql',
-        ' /usr/share/zabbix-server-mysql/images.sql',
+        'zcat /usr/share/doc/zabbix-server-mysql/create.sql.gz',
         ' > /tmp/zabbix/schema.sql'], '')
 
       $frontend_service          = 'apache2'
