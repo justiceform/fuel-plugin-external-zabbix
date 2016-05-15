@@ -274,7 +274,6 @@ Timeout=<%= scope.lookupvar('plugin_zabbix::params::agent_timeout') %>
 # Default:
 # Include=
 
-Include=/etc/zabbix/zabbix_agentd.d/
 <% if scope.lookupvar('plugin_zabbix::params::has_userparameters') %>
 Include=<%= scope.lookupvar('plugin_zabbix::params::agent_include') %>
 <% end %>
